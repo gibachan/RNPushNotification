@@ -178,7 +178,6 @@
 				BFFECBEE56167DE927EDBEDF /* Pods-RNPushNotification-RNPushNotificationTests.debug.xcconfig */,
 				4A522758B37EFC6B1CFD2195 /* Pods-RNPushNotification-RNPushNotificationTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -602,7 +601,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.rn-push-notification.ios";
 				PRODUCT_NAME = RNPushNotification;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -624,7 +623,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.rn-push-notification.ios";
 				PRODUCT_NAME = RNPushNotification;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

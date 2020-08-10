@@ -15,7 +15,22 @@ import messaging from '@react-native-firebase/messaging'; // これを追加す�
 const App = () => {
   const [message, setMessage] = useState('まだ通知を受信していません');
 
+  // 通知の許可をリクエストする
+  async function requestUserPermission() {
+    const authStatus = await messaging().requestPermission();
+    const enabled =
+      authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+      authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+
+    if (enabled) {
+      console.log('通知が許可されました');
+    }
+  }
+
   useEffect(() => {
+    // 最初に通知の許可をリクエストする
+    requestUserPermission();
+
     // `wether`トピックを購読
     messaging()
       .subscribeToTopic('weather')

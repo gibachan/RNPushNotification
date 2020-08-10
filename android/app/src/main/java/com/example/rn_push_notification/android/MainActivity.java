@@ -1,4 +1,4 @@
-package com.rnpushnotification;
+package com.example.rn_push_notification.android;
 
 import com.facebook.react.ReactActivity;
 

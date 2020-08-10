@@ -27,6 +27,8 @@ static void InitializeFlipper(UIApplication *application) {
 }
 #endif
 
+#import <Firebase.h> // これを追加
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application
@@ -51,6 +53,12 @@ static void InitializeFlipper(UIApplication *application) {
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  // これを追加
+  if ([FIRApp defaultApp] == nil) {
+    [FIRApp configure];
+  }
+  
   return YES;
 }
 
